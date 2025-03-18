@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+    <div>
+        <h1>Joke</h1>
+        {% if joke.joke %}
+        <p>{{ joke.joke }}</p>
+        {% else %}
+        <p>{{ joke.setup }}</p>
+        <p>{{ joke.delivery }}</p>
+        {% endif %}
+    </div>
+
+    <button onclick="location.href='/joke'">Get Another Joke</button>
+</div>
+{% endblock %}

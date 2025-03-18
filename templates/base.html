@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTMX Demo</title>
+        <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="/static/styles.css" />
+    </head>
+    <body>
+        {% block content %}
+        <div class="container">
+            <h1>Welcome to HTMX Demo</h1>
+            <button hx-post="/clicked" hx-swap="outerHTML">Click Me</button>
+            <div class="message">Hello World!</div>
+        </div>
+        {% endblock %}
+    </body>
+</html>
